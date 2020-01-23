@@ -50,7 +50,7 @@ function flipCard(){
     checkForMatch();
 	}
 	//In the console, the rank, pathway to image, and suit should display after clicking on the card
-    console.log("User flipped "+ cards[cardId].rank);
+	console.log("User flipped "+ cards[cardId].rank);
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
 };
@@ -82,18 +82,18 @@ restartButton.addEventListener('click', restartGame);
 function flipBackOver(){
 	//a for loop was needed to go through the process four times to reset each card
 	for (i =0; i<=3; i ++){
-		cardsInPlay.pop();//each loop removes one of the items in the cardsInPlay array
-        cardElement = document.getElementsByTagName('img')[i]; //defining the variable cardElement
-	    cardElement.setAttribute('src', 'images/back.png');//resetting the picture of the card to the back
+	cardsInPlay.pop();//each loop removes one of the items in the cardsInPlay array
+	cardElement = document.getElementsByTagName('img')[i]; //defining the variable cardElement
+	cardElement.setAttribute('src', 'images/back.png');//resetting the picture of the card to the back
 	};
 };
 function restartGame(){
 	//a for loop was needed to go through the process four times to reset each card
 	for (i =0; i<=3; i ++){
-		cardsInPlay.pop();//each loop removes one of the items in the cardsInPlay array
-        cardElement = document.getElementsByTagName('img')[i]; //defining the variable cardElement
-	    cardElement.setAttribute('src', 'images/back.png');//resetting the picture of the card to the back
-	    totalScore= 0;
-	    document.getElementById('score-board').innerHTML = "Score: "+ totalScore;
+	cardsInPlay.pop();//each loop removes one of the items in the cardsInPlay array
+	cardElement = document.getElementsByTagName('img')[i]; //defining the variable cardElement
+	cardElement.setAttribute('src', 'images/back.png');//resetting the picture of the card to the back
+	totalScore= 0;
+	document.getElementById('score-board').innerHTML = "Score: "+ totalScore;
 	};
 };
