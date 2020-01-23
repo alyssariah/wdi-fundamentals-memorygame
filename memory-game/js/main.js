@@ -71,15 +71,15 @@ function checkForMatch() {
 createBoard();
 
 //make variable for the flipButton and  restaratButton in the HTML document
-const flipButton = document.getElementById('flipBackOver');
+const flipButton = document.getElementById('flipBack');
 const restartButton = document.getElementById('restart');
 
 //add an event listener so when the button is clicked, resetGame function will be activated
-flipButton.addEventListener('click', flipOver);
+flipButton.addEventListener('click', flipBackOver);
 restartButton.addEventListener('click', restartGame);
 
 //resetGame function takes all the cards out of the cardsInPlay array and turn back over cards
-function flipOver(){
+function flipBackOver(){
 	//a for loop was needed to go through the process four times to reset each card
 	for (i =0; i<=3; i ++){
 		cardsInPlay.pop();//each loop removes one of the items in the cardsInPlay array
