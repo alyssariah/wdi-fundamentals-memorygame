@@ -56,7 +56,7 @@ function createBoard (){
 		//a cardElement variable was made each time an image element was made during the loop
 		let cardElement = document.createElement('img');
 		//An attribute is added the img element called cardElement which is src="images/back.png"
-		cardElement.setAttribute('src', backCardImage);
+		cardElement.setAttribute('src', "images/back.png");
 		//setting the data-id for cardelement to i for every loop
 		cardElement.setAttribute('data-id', i);
 		//if a card element is clicked on, activate the function for flipCard
