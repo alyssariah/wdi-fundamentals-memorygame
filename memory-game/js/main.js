@@ -44,7 +44,7 @@ cardImage: "images/king-of-diamonds.png"
 
 //Declaring an empty array for cardInPlay to push flipped cards into
 let cardsInPlay = [];
-let backCardImage = "images/back.png";
+let backCardImage = "file:///Users/alyssajackson/fundamentals/git-practice/wdi-fundamentals-memorygame/memory-game/images/back.png";
 
 //declaring variable for the flipButton and  restaratButton in the HTML document
 const restartButton = document.getElementById('restart');
@@ -56,7 +56,7 @@ function createBoard (){
 		//a cardElement variable was made each time an image element was made during the loop
 		let cardElement = document.createElement('img');
 		//An attribute is added the img element called cardElement which is src="images/back.png"
-		cardElement.setAttribute('src', "images/back.png");
+		cardElement.setAttribute('src', "../images/back.png");
 		//setting the data-id for cardelement to i for every loop
 		cardElement.setAttribute('data-id', i);
 		//if a card element is clicked on, activate the function for flipCard
