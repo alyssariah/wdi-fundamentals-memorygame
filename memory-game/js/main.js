@@ -44,7 +44,7 @@ cardImage: "images/king-of-diamonds.png"
 
 //Declaring an empty array for cardInPlay to push flipped cards into
 let cardsInPlay = [];
-let backCardImage = "file:///Users/alyssajackson/fundamentals/git-practice/wdi-fundamentals-memorygame/memory-game/images/back.png";
+let backCardImage = "images/back.png";
 
 //declaring variable for the flipButton and  restaratButton in the HTML document
 const restartButton = document.getElementById('restart');
@@ -133,26 +133,26 @@ function checkForMatch() {
 	}
 };
 
-//adding event listeners to buttons
-flipButton.addEventListener('click', flipBackOver);
-restartButton.addEventListener('click', restartGame);
+// //adding event listeners to buttons
+// flipButton.addEventListener('click', flipBackOver);
+// restartButton.addEventListener('click', restartGame);
 
-function flipBackOver(){
-	//changing image of card to the back for the mismatches flipped over
-	if (cardsInPlay.length === 2){
-	for (i=0; i <cards.length; i++){
-		if(cardsInPlay[0] === cards[i]){
-		cardElement[i].setAttribute('src', backCardImage);
-	}
-	    else if (cardsInPlay[1] === cards[i]){
-		cardElement[i].setAttribute('src', backCardImage);
-	}
-}
-//remove cards from cardsInPlay array
-	cardsInPlay.pop();
-	cardsInPlay.pop();
-}
-}
+// function flipBackOver(){
+// 	//changing image of card to the back for the mismatches flipped over
+// 	if (cardsInPlay.length === 2){
+// 	for (i=0; i <cards.length; i++){
+// 		if(cardsInPlay[0] === cards[i]){
+// 		cardElement[i].setAttribute('src', backCardImage);
+// 	}
+// 	    else if (cardsInPlay[1] === cards[i]){
+// 		cardElement[i].setAttribute('src', backCardImage);
+// 	}
+// }
+// //remove cards from cardsInPlay array
+// 	cardsInPlay.pop();
+// 	cardsInPlay.pop();
+// }
+// }
 
 
 function restartGame(){
