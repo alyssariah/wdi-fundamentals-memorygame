@@ -82,7 +82,7 @@ createBoard();
  for checkForMatch after two cards are picked*/
 function flipCard(){
 	//only flip over cards with backCardImage and when there is less than two cards in play
-if (this.src === "images/back.png" && cardsInPlay.length < 2){
+if (cardsInPlay.length < 2){
 	let cardId = this.getAttribute('data-id');
 	this.setAttribute('src', cards[cardId].cardImage);
 	cardsInPlay.push(cards[cardId]);
