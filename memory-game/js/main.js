@@ -44,7 +44,7 @@ cardImage: "images/king-of-diamonds.png"
 
 //Declaring an empty array for cardInPlay to push flipped cards into
 let cardsInPlay = [];
-let backCardImage = "file:///Users/alyssajackson/fundamentals/git-practice/wdi-fundamentals-memorygame/memory-game/images/back.png";
+let backCardImage = "images/back.png";
 
 //declaring variable for the flipButton and  restaratButton in the HTML document
 const restartButton = document.getElementById('restart');
