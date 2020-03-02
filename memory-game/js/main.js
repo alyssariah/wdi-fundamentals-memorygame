@@ -44,7 +44,7 @@ cardImage: "images/king-of-diamonds.png"
 
 //Declaring an empty array for cardInPlay to push flipped cards into
 let cardsInPlay = [];
-let backCardImage = "images/back.png";
+// let backCardImage = "images/back.png";
 
 //declaring variable for the flipButton and  restaratButton in the HTML document
 const restartButton = document.getElementById('restart');
@@ -82,7 +82,7 @@ createBoard();
  for checkForMatch after two cards are picked*/
 function flipCard(){
 	//only flip over cards with backCardImage and when there is less than two cards in play
-if (this.src === backCardImage && cardsInPlay.length < 2){
+if (this.src === "images/back.png" && cardsInPlay.length < 2){
 	let cardId = this.getAttribute('data-id');
 	this.setAttribute('src', cards[cardId].cardImage);
 	cardsInPlay.push(cards[cardId]);
@@ -133,26 +133,26 @@ function checkForMatch() {
 	}
 };
 
-// //adding event listeners to buttons
-// flipButton.addEventListener('click', flipBackOver);
-// restartButton.addEventListener('click', restartGame);
+//adding event listeners to buttons
+flipButton.addEventListener('click', flipBackOver);
+restartButton.addEventListener('click', restartGame);
 
-// function flipBackOver(){
-// 	//changing image of card to the back for the mismatches flipped over
-// 	if (cardsInPlay.length === 2){
-// 	for (i=0; i <cards.length; i++){
-// 		if(cardsInPlay[0] === cards[i]){
-// 		cardElement[i].setAttribute('src', backCardImage);
-// 	}
-// 	    else if (cardsInPlay[1] === cards[i]){
-// 		cardElement[i].setAttribute('src', backCardImage);
-// 	}
-// }
-// //remove cards from cardsInPlay array
-// 	cardsInPlay.pop();
-// 	cardsInPlay.pop();
-// }
-// }
+function flipBackOver(){
+	//changing image of card to the back for the mismatches flipped over
+	if (cardsInPlay.length === 2){
+	for (i=0; i <cards.length; i++){
+		if(cardsInPlay[0] === cards[i]){
+		cardElement[i].setAttribute('src', "images/back.png");
+	}
+	    else if (cardsInPlay[1] === cards[i]){
+		cardElement[i].setAttribute('src', "images/back.png");
+	}
+}
+//remove cards from cardsInPlay array
+	cardsInPlay.pop();
+	cardsInPlay.pop();
+}
+}
 
 
 function restartGame(){
